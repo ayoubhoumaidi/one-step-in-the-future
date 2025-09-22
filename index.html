@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Step in the Future</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #c3f0f2, #d1c4f9);
+      color: #1f1f1f;
+    }
+    a { text-decoration: none; color: white; }
+    h1, h2, h3 { margin: 0; padding: 0; }
+    p { line-height: 1.6; }
+    section { padding: 60px 20px; }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #0077cc, #00bfa5);
+      color: white;
+      text-align: center;
+      padding: 80px 20px 40px 20px;
+    }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.5em; font-style: italic; margin-bottom: 5px; }
+    header span.school-credit { display: block; font-size: 1.2em; margin-top: 10px; font-weight: bold; }
+
+    /* About Us */
+    #about-us {
+      text-align: center;
+      max-width: 900px;
+      margin: 40px auto;
+      font-size: 1.3em;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #ffe47a, #f9a1bc);
+      border-radius: 15px;
+      color: #1f1f1f;
+    }
+
+    /* Our Goal */
+    #our-goal {
+      text-align: center;
+      max-width: 1000px;
+      margin: 40px auto;
+      font-size: 1.4em;
+      font-weight: 500;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #a1f9d1, #91d9ff);
+      border-radius: 15px;
+      color: #1f1f1f;
+    }
+    #our-goal p.quote {
+      font-style: italic;
+      margin-top: 25px;
+      font-size: 1.5em;
+    }
+
+    /* Research Sections */
+    .research-section { max-width: 1200px; margin: 0 auto 60px auto; }
+    .research-buttons { text-align: center; margin-bottom: 40px; }
+    .research-buttons button {
+      padding: 15px 30px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff7f50;
+      color: white;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .research-buttons button:hover { background-color: #e66b3a; }
+    .research-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .research-card {
+      background: linear-gradient(135deg, #ffffff80, #ffffff50);
+      width: 280px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .research-card:hover { transform: translateY(-5px); }
+    .research-card h3 { margin-bottom: 10px; color: #0077cc; }
+    .research-card p { font-size: 0.95em; }
+
+    /* Submission Section */
+    #submission {
+      text-align: center;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      background: linear-gradient(135deg, #ffd1a9, #ff9393);
+      border-radius: 15px;
+      color: #1f1f1f;
+    }
+    #submission a.submit-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 35px;
+      background-color: #0077cc;
+      color: white;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+    #submission a.submit-button:hover { background-color: #005fa3; }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #0077cc, #00bfa5);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer p { margin: 5px 0; font-size: 1em; }
+
+    html { scroll-behavior: smooth; }
+
+    @media (max-width: 900px) { .research-list { gap: 20px; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>One Step in the Future</h1>
+    <p>"Research Today, Lead Tomorrow"</p>
+    <span class="school-credit">Presented by Groupe Scolaire Rahmouni Potentiel</span>
+  </header>
+
+  <!-- About Us -->
+  <section id="about-us">
+    <h2>About Us</h2>
+    <p>One Step in the Future is a school-certified platform presented by Groupe Scolaire Rahmouni Potentiel, where senior students conduct and publish real research on future-oriented STEM topics. The website provides a first step for students to explore their intended fields of study while gaining academic recognition.</p>
+  </section>
+
+  <!-- Our Goal -->
+  <section id="our-goal">
+    <h2>Our Goal</h2>
+    <p>Our mission is to empower students to explore and contribute to the future of STEM through hands-on research and innovation.</p>
+    <p class="quote">"No matter what your dreams or ambitions are, here you can finally take a step into them."</p>
+  </section>
+
+  <!-- Research Sections -->
+  <section class="research-section">
+    <div class="research-buttons">
+      <button onclick="showBest()">Best Of</button>
+      <button onclick="showLibrary()">Research Library</button>
+    </div>
+
+    <!-- Best Of -->
+    <div id="best-of-section" class="research-list">
+      <div class="research-card">
+        <h3>AI in Healthcare</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Exploring how artificial intelligence can improve diagnostics and patient care.</p>
+      </div>
+      <div class="research-card">
+        <h3>Renewable Energy Innovations</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Research on sustainable energy sources and future technology solutions.</p>
+      </div>
+      <div class="research-card">
+        <h3>Quantum Computing</h3>
+        <p>By Student Name</p>
+        <p>Abstract: An introduction to next-generation computation technologies.</p>
+      </div>
+      <div class="research-card">
+        <h3>Space Colonization</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Studying the potential for human settlements beyond Earth.</p>
+      </div>
+      <div class="research-card">
+        <h3>Robotics in Education</h3>
+        <p>By Student Name</p>
+        <p>Abstract: How robotics is transforming learning experiences in schools.</p>
+      </div>
+    </div>
+
+    <!-- Research Library -->
+    <div id="research-library-section" class="research-list" style="display:none;">
+      <div class="research-card">
+        <h3>AI in Healthcare</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Exploring how artificial intelligence can improve diagnostics and patient care.</p>
+      </div>
+      <div class="research-card">
+        <h3>Renewable Energy Innovations</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Research on sustainable energy sources and future technology solutions.</p>
+      </div>
+      <div class="research-card">
+        <h3>Quantum Computing</h3>
+        <p>By Student Name</p>
+        <p>Abstract: An introduction to next-generation computation technologies.</p>
+      </div>
+      <div class="research-card">
+        <h3>Space Colonization</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Studying the potential for human settlements beyond Earth.</p>
+      </div>
+      <div class="research-card">
+        <h3>Robotics in Education</h3>
+        <p>By Student Name</p>
+        <p>Abstract: How robotics is transforming learning experiences in schools.</p>
+      </div>
+      <div class="research-card">
+        <h3>Virtual Reality Learning</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Using VR to improve student engagement and understanding.</p>
+      </div>
+      <div class="research-card">
+        <h3>Bioengineering Innovations</h3>
+        <p>By Student Name</p>
+        <p>Abstract: Future applications of bioengineering in medicine and agriculture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submission -->
+  <section id="submission">
+    <h2>Submit Your Research</h2>
+    <p>Ready to take the first step in your STEM research journey? Submit your work below!</p>
+    <a href=https://docs.google.com/forms/d/e/1FAIpQLScPU8WEUhyFfZchQU-8fILizUeuPXGtkF42ONkGLtjnVwoIrw/viewform?usp=header class="submit-button" target="_blank">Submit Research</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Founded by <strong>Houmaidi Mohamed Ayoub</strong></p>
+    <p>Founder of the Potentiel STEM Club & One Step in the Future platform</p>
+    <p>Presented by <strong>Groupe Scolaire Rahmouni Potentiel</strong></p>
+    <p>Special thanks to <strong>Potentiel STEM Club</strong></p>
+  </footer>
+
+  <script>
+    // Toggle sections and scroll
+    function showBest() {
+      document.getElementById('best-of-section').style.display = 'flex';
+      document.getElementById('research-library-section').style.display = 'none';
+      document.getElementById('best-of-section').scrollIntoView({behavior: 'smooth'});
+    }
+    function showLibrary() {
+      document.getElementById('best-of-section').style.display = 'none';
+      document.getElementById('research-library-section').style.display = 'flex';
+      document.getElementById('research-library-section').scrollIntoView({behavior: 'smooth'});
+    }
+  </script>
+
+</body>
+</html>
